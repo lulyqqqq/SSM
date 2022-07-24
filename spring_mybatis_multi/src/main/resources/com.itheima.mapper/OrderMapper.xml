@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.mapper.OrderMapper">
+
+    <resultMap id="orderMap" type="order">
+        <!--手动指定字段与实体属性的映射关系
+             column:数据表的字段名称
+             property:实体的属性名称
+             配置两个表的数据在一个表上能查询出来
+             两个表中有相同名称的字段,需要自己重新定义字段名称 对应实体类上的属性名称
+             resultMap 键值对类型 为下文sql语句配置属性 返回的类型为指定查询的实体类属性
+                -->
+        <id column="oid" property="id"></id>
+        <result column="orderTime" property="orderTime"></result>
+        <result column="total" property="total"></result>
+<!--        <result column="uid" property="user.id"></result>-->
+<!--        <result column="username" property="user.username"></result>-->
+<!--        <result column="password" property="user.password"></result>-->
+<!--        <result column="birthday" property="user.birthday"></result>-->
+
+        <!--property:当前实体属性名称(private User user)
+            javaType:当前(order)中的属性类型(User) 但是在配置文件里起别名为useres
+                -->
+        <association property="user" javaType="useres">
+            <id column="uid" property="id"></id>
+            <result column="username" property="username"></result>
+            <result column="password" property="password"></result>
+            <result column="birthday" property="birthday"></result>
+        </association>
+    </resultMap>
+
+
+
+    <select id="findAll" resultMap="orderMap">
+        select *, o.oid oid from order o,user u where o.uid = u.id
+    </select>
+
+
+</mapper>

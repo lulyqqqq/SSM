@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Spring.iml" filepath="$PROJECT_DIR$/.idea/Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itcast-mybatis-plus-simple/itcast-mybatis-plus-simple.iml" filepath="$PROJECT_DIR$/itcast-mybatis-plus-simple/itcast-mybatis-plus-simple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_aop_test/spring_aop_test.iml" filepath="$PROJECT_DIR$/spring_aop_test/spring_aop_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_exception/spring_exception.iml" filepath="$PROJECT_DIR$/spring_exception/spring_exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_interceptor/spring_interceptor.iml" filepath="$PROJECT_DIR$/spring_interceptor/spring_interceptor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_ioc/spring_ioc.iml" filepath="$PROJECT_DIR$/spring_ioc/spring_ioc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_jdbc/spring_jdbc.iml" filepath="$PROJECT_DIR$/spring_jdbc/spring_jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mvc/spring_mvc.iml" filepath="$PROJECT_DIR$/spring_mvc/spring_mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mybatis_config/spring_mybatis_config.iml" filepath="$PROJECT_DIR$/spring_mybatis_config/spring_mybatis_config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mybatis_dao/spring_mybatis_dao.iml" filepath="$PROJECT_DIR$/spring_mybatis_dao/spring_mybatis_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mybatis_mapper/spring_mybatis_mapper.iml" filepath="$PROJECT_DIR$/spring_mybatis_mapper/spring_mybatis_mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mybatis_multi/spring_mybatis_multi.iml" filepath="$PROJECT_DIR$/spring_mybatis_multi/spring_mybatis_multi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_mybatis_quick/spring_mybatis_quick.iml" filepath="$PROJECT_DIR$/spring_mybatis_quick/spring_mybatis_quick.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_test/spring_test.iml" filepath="$PROJECT_DIR$/spring_test/spring_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_tx/spring_tx.iml" filepath="$PROJECT_DIR$/spring_tx/spring_tx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm/ssm.iml" filepath="$PROJECT_DIR$/ssm/ssm.iml" />
+    </modules>
+  </component>
+</project>

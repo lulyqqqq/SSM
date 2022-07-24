@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.mapper.UserMapper">
+
+    <!--配置一对多 user可以用于多个订单 订单是一个List集合
+        集合有对应的订单数据-->
+    <resultMap id="UserMap" type="useres">
+        <id column="uid" property="id"></id>
+        <result column="username" property="username"></result>
+        <result column="password" property="password"></result>
+        <result column="birthday" property="birthday"></result>
+
+        <!--配置集合信息
+            property:集合名称
+            ofType:当前集合中的数据类型    -->
+        <collection property="orderList" ofType="order">
+            <!--封装集合数据-->
+            <id column="oid" property="id"></id>
+            <result column="orderTime" property="orderTime"></result>
+            <result column="total" property="total"></result>
+        </collection>
+    </resultMap>
+
+    <select id="findAll" resultMap="UserMap">
+        select *, o.id oid
+        from user u,
+             order o
+        where u.id = o.uid
+    </select>
+
+    <!--#################################################    -->
+    <resultMap id="userRoleMap" type="useres">
+        <!--配置user的信息-->
+        <id column="userId" property="id"></id>
+        <result column="username" property="username"></result>
+        <result column="password" property="password"></result>
+        <result column="birthday" property="birthday"></result>
+        <!--配置user内部的roleList信息-->
+        <collection property="roleList" ofType="role">
+            <id column="roleId" property="id"></id>
+            <result column="roleName" property="roleName"></result>
+            <result column="roleDesc" property="roleDesc"></result>
+        </collection>
+    </resultMap>
+    <select id="findUserAndRole" resultMap="userRoleMap">
+        select *
+        from user u,
+             role r,
+             userrole ur
+        where u.id = ur.userId
+          and ur.roleId = r.id
+    </select>
+
+
+
+
+
+    <insert id="save" parameterType="useres">
+        insert into user
+        values (#{id}, #{username}, #{password}, #{birthday})
+    </insert>
+
+    <select id="findById" parameterType="int" resultType="useres">
+        select *
+        from user
+        where id = #{id}
+    </select>
+</mapper>
